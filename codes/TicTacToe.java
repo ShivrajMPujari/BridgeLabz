@@ -4,14 +4,14 @@ import com.bridgelabz.utility.Utility;
 
 public class TicTacToe {
 
-	  static final int EMPTY = 0;
+		static final int EMPTY = 0;
 	    static final int NONE = 0;
 	    static final int USER = 1;
 	    static final int COMPUTER = 2;
 	    static final int Tie = 3;
 
 	    public static void main(String[] args) {
-	    	new Utility();
+	    	
 		// 1 = user, 2 = computer
 		int turn = USER;
 
@@ -19,7 +19,7 @@ public class TicTacToe {
 	        // 0 = empty, 1 = user, 2 = computer
 		int[][] board = new int[3][3];
 
-		// move: 1-9 representing
+		// move: 0-8 representing
 		int move;
 
 		// winner: 0 = none, 1 = user, 2 = computer, 3 = tie
@@ -30,7 +30,7 @@ public class TicTacToe {
 		System.out.println("Enter 0-8 to indicate your move");
 
 
-		print_board(board);
+		Utility.print_board(board);
 
 		// While (game not over)
 		while(true) 
@@ -47,7 +47,7 @@ public class TicTacToe {
 		    } 
 		    else 
 		    {
-		    	move = computer_move(board);
+		    	move = Utility.computer_move(board);
 		    	System.out.println("Computer move: " + move);
 		    }
 
@@ -55,10 +55,10 @@ public class TicTacToe {
 		    board[(int)(move/3)][move%3] = turn;
 
 		    // Print the board
-		    print_board(board);
+		   Utility. print_board(board);
 
 		    // if game is over
-		    winner = checkWinner(board);
+		    winner = Utility.checkWinner(board);
 
 		    if(winner != NONE)
 			break;
@@ -89,7 +89,7 @@ public class TicTacToe {
 		}
 	    }
 
-	    // Print the board
+/*	    // Print the board
 	    public static void print_board(int[][] board) {
 		System.out.print(printChar(board[0][0]));
 		System.out.print("|");
@@ -109,7 +109,10 @@ public class TicTacToe {
 		System.out.print("|");
 		System.out.println(printChar(board[2][2]));
 	    }
-
+*/
+	    
+	    
+	 /*   
 	    // Return an X or O, depending upon whose move it was
 	    public static char printChar(int b) {
 		switch(b) {
@@ -123,6 +126,9 @@ public class TicTacToe {
 		return ' ';
 	    }
 
+	    */
+	    
+	/*    
 	    // See if the game is over
 	    public static int checkWinner(int[][] board) {
 
@@ -175,7 +181,12 @@ public class TicTacToe {
 
 		return Tie;
 	    }
-
+	    
+	    
+	    */
+	    
+	    
+/*
 	    // Generate a random computer move
 	    public static int computer_move(int[][] board) 
 	    {
@@ -187,6 +198,6 @@ public class TicTacToe {
 	    	return move;
 	}
 	
-	
+	*/
 	
 }

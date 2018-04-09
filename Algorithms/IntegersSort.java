@@ -11,18 +11,8 @@ public class IntegersSort {
 		System.out.println("Enter the integer list");
 		String st=Utility.inputStringLong();
 		 String[] s=st.split("\\s");
-		 int integer[]= new int[s.length];
-		 
-		 for(int i=0;i<s.length;i++){
-			 
-			 if(s[i].equals("")){
-				 continue;
-			 }
-			 integer[i]=Integer.parseInt(s[i]);
-			 
-		 }
-		 
-		 System.out.println(Arrays.toString(integer));
+		
+		int[] integer=Utility.stringTOInt(s);
 		 Utility.bSortInt(integer);
 		 System.out.println(Arrays.toString(integer));
 		 
