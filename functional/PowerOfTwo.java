@@ -2,7 +2,7 @@ package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
-public class Pow2 {
+public class PowerOfTwo {
 
 	public static void main(String[] args) {
 		

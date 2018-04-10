@@ -13,8 +13,15 @@ public class DayOfTheWeek {
 		System.out.println("Year:");
 		int y=Utility.inputInt();
 		int day=Utility.findingDay(m,d,y);
-		System.out.println(day);
+		Utility.printDay(day);
+		//System.out.println(day);
 
 	}
 
-}
+	
+	}
+	
+	
+	
+	
+

@@ -67,6 +67,41 @@ public class Utility {
 		return st;
 	}
 	
+	
+	public static String[] splitString(String inputString,String name){
+		
+		String []stringArray=inputString.split("\\s");
+		
+		for (int i = 0; i < stringArray.length; i++) {
+			
+			if(stringArray[i].equals("<<UserName>>,")){
+				
+				stringArray[i]=name+",";
+				break;
+
+			}
+			
+			
+		}
+		return stringArray;
+		
+		
+	}
+	
+	public static String convertToString(String [] st){
+			String output="";
+			
+		for (int i = 0; i < st.length; i++) {
+			
+			output=output+st[i]+" ";
+		}
+		
+		
+		return output;
+
+	}
+	
+	
 
 	// question 2(head and tail)(functional)
 	public static void flip(int number) {
@@ -102,13 +137,13 @@ public class Utility {
 	
 	// question 3 (leap year)(functional)
 
-	public static void CheckleapYear(String year) {
+	public static void checkLeapYear(String year) {
 
 		int saal = 0;
 
 		if (year.length()<4) {
 
-			System.out.println("Please enter the digit of four years");
+			System.out.println("You entered invalid the digits of year");
 			return;
 		}
 
@@ -197,7 +232,7 @@ public class Utility {
 	
 	// question 6 prime factorization(functional)
 
-	public static void primeFactorization(long n) {
+	public static void factorizePrime(long n) {
 		for (long i = 2; i * i <= n; i++) {
 			while (n % i == 0) {
 				System.out.print(i + " ");
@@ -259,7 +294,7 @@ public class Utility {
 	}
 	
 	
-	public static void distinctCouponGenerator(int n) {
+	public static void couponGenerator(int n) {
 		boolean same = false;
 		int a[] = new int[n];
 		for (int i = 0; i < n; i++) {
@@ -341,7 +376,7 @@ public class Utility {
 	
 	
 	
-	public static  void arraySelection() {
+	public static  void selectArray() {
 		
 		int size = 0;
 		System.out.println("select the array type:- 1.integer 2.boolean 3.double");
@@ -350,16 +385,16 @@ public class Utility {
 		System.out.println(a);
 		if (a == 1) {
 
-			System.out.println("enter the column of array");
-			int column = Utility.inputInt();
-			
-			System.out.println("enter the row of array");
+			System.out.println("Enter the row of array");
 			int row = Utility.inputInt();
+			
+			System.out.println("Enter the column of array");
+			int column = Utility.inputInt();
 			int[][] arr = new int[row ][column];
 
 			for (int i = 0; i < row; i++) {
 				for (int j = 0; j < column; j++) {
-					System.out.println("enter the values to array");
+					System.out.println("Enter the values to array");
 					arr[i][j] = Utility.inputInt();
 
 				}
@@ -371,7 +406,7 @@ public class Utility {
 				for (int j = 0; j < column; j++) {
 					
 					String val=Integer.toString(arr[i][j]);
-						Utility.prints(val);	
+						Utility.prints(val+" ");	
 
 				}
 				System.out.println();
@@ -382,18 +417,18 @@ public class Utility {
 		else if(a==2){
 			
 
-			System.out.println("enter the column of array");
-			int column = Utility.inputInt();
-			
-			System.out.println("enter the row of array");
+			System.out.println("Enter the row of array");
 			int row = Utility.inputInt();
+			
+			System.out.println("Enter the column of array");
+			int column = Utility.inputInt();
 		//	int[][] arr = new int[column ][row];
 
 			
 			
 //			System.out.println("enter the size of array");
 //			size = Utility.inputInt();
-			boolean[][] arr = new boolean[column ][row];
+			boolean[][] arr = new boolean[row ][column];
 
 			for (int i = 0; i <row; i++) {
 				for (int j = 0; j < column; j++) {
@@ -409,7 +444,7 @@ public class Utility {
 				for (int j = 0; j < column; j++) {
 					
 					String val=Boolean.toString(arr[i][j]);
-						Utility.prints(val);	
+						Utility.prints(val+" ");	
 
 				}
 				System.out.println();
@@ -440,7 +475,7 @@ public class Utility {
 				for (int j = 0; j < column; j++) {
 					
 					String val=Double.toString(arr[i][j]);
-						Utility.prints(val);	
+						Utility.prints(val+" ");	
 
 				}
 				System.out.println();
@@ -458,7 +493,7 @@ public class Utility {
 	
 	
 	// question 11 euclidian distance
-	public static void euclideanDistanceCalculation (String x1,String y1){
+	public static void calculateDistance(String x1,String y1){
 		
 		
 		
@@ -471,7 +506,7 @@ public class Utility {
 		double sum=Math.pow(x, 2)+Math.pow(y, 2);
 		
 		double result= Math.pow(sum ,0.5);
-		System.out.println(result);
+		System.out.println("Euclidian distance is "+result);
 		
 		
 		
@@ -745,7 +780,7 @@ public class Utility {
 	// ALOGORITHMS -------------
 
 	// QUESTION 1 ANAGRAM detection
-	public static void anagramDetection(String s1, String s2) {
+	public static void  detectAnagram(String s1, String s2) {
 
 		char[] a1 = s1.toCharArray();
 		char[] a2 = s2.toCharArray();
@@ -953,7 +988,7 @@ public class Utility {
 
 	// Anagram check
 
-	public static void aCheck(int num1, int num2) {
+	/*public static void aCheck(int num1, int num2) {
 
 		String s1 = Integer.toString(num1);
 		String s2 = Integer.toString(num2);
@@ -986,7 +1021,28 @@ public class Utility {
 		}
 
 	}
-	
+	*/
+	    public static void checkingIntAnagaram(int n1, int n2){
+
+	        String num1=String.valueOf(n1);
+	        String num2=String.valueOf(n2);
+			
+	        char[] string1=num1.toCharArray();
+	        char[] string2=num2.toCharArray();
+	        Arrays.sort(string1);
+	        Arrays.sort(string2);
+	        String st1=new String(string1);
+	        String st2=new String(string2);
+	        if(st1.equals(st2)){
+	        	System.out.println(n1+" "+n2+"  are anagram");
+	        }
+			
+		}
+	    
+	    
+	    
+	    
+	    
 	// QUESTION 4 Utility methods
 
 	public static void binarySearchInt(int arr[], int sIndex, int eIndex, int x) {
@@ -1445,6 +1501,37 @@ public class Utility {
 	        //System.out.println(d1);
 	        return d1;
 	}
+	 
+	 public static void printDay(int num){
+			
+			switch (num) {
+			case 0:
+				System.out.println("it's Sunday");
+				break;
+			case 1:
+				System.out.println("it's Monday");
+				break;
+			case 2:
+				System.out.println("it's Tuesday");
+				break;
+			case 3:
+				System.out.println("it's Wednesday");
+				break;
+			case 4:
+				System.out.println("it's Thrusday");
+				break;
+			case 5:
+				System.out.println("it's Friday");
+				break;	
+			case 6:
+				System.out.println("it's Saturday");
+				break;		
+			default:
+				System.out.println("NO-day");
+				break;
+			}
+	 }
+			
 
 	 //temperature conversion
 	 

@@ -8,7 +8,7 @@ public class Coupon {
 	
 		System.out.println("Enter the N term:");
 		int n = Utility.inputInt();
-		Utility.distinctCouponGenerator(n);
+		Utility.couponGenerator(n);
 		
 		
 	}

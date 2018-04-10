@@ -4,13 +4,14 @@ import com.bridgelabz.utility.Utility;
 
 public class LeapYear {
 
+
 	public static void main(String[] args) {
 		
 		String year=null;
 		
-		System.out.println("enter the any year");
+		System.out.println("Enter the any year");
 		year=Utility.inputString();
-		Utility.CheckleapYear(year);
+		Utility.checkLeapYear(year);
 		
 	}
 }

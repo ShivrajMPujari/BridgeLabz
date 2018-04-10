@@ -6,13 +6,12 @@ public class PrimeFactors {
 
 	public static void main(String[] args) {
 		
-		System.out.println("enter the numbar to find prime factor");
+		System.out.println("Enter the numbar to find prime factor");
 	//	int number=Utility.inputInt();
 		
 	//	Utility.factorization(number);
-		
 		long number=Utility.inpuLong();
-		Utility.primeFactorization(number);
+		Utility.factorizePrime(number);
 		
 	}
 	

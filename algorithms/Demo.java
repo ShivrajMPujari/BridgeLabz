@@ -12,12 +12,6 @@ public  class Demo {
 	public static void main(String[] args) {
 		
 		
-		int num1=91;
-		int num2=19;
-		
-		Utility.aCheck(num1, num2);
-		
 	}
-	
 	
 }

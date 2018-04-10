@@ -10,8 +10,8 @@ public class Distance {
 		String x1=args[0];
 		String y1=args[1];
 	//	System.out.println(x1);
-		System.out.println("the point to calculate distance from origin is");
-		Utility.euclideanDistanceCalculation(x1, y1);
+		//System.out.println("the point to calculate distance from origin is");
+		Utility.calculateDistance(x1, y1);
 	}
 
 }
