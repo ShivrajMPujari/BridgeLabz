@@ -1,4 +1,4 @@
-package com.bridgelabz.codes;
+package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
@@ -9,7 +9,7 @@ public class Harmonic {
 
 		System.out.println("enter the number to calculate the harmonic");
 		number = Utility.inputDouble();
-		Utility.harmonicCal(number);
+		Utility.harmonicCalculation(number);
 
 	}
 }

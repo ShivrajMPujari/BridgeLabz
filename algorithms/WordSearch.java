@@ -1,4 +1,4 @@
-package com.bridgelabz.Algorithms;
+package com.bridgelabz.algorithms;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,10 +10,10 @@ import com.bridgelabz.utility.Utility;
 public class WordSearch {
 
 	public static void main(String[] args) {
-		
+		///home/bridgeit/Downloads/shiv/ExpCode/src/com/bridgelabz/algorithms/d
 		
 		try {
-			FileReader fr = new FileReader("//home//bridgeit//Downloads//shiv//ExpCode//src//com//bridgelabz//Algorithms//demo.txt");
+			FileReader fr = new FileReader("//home//bridgeit//Downloads//shiv//ExpCode//src//com//bridgelabz//algorithms//demo.txt");
 			BufferedReader br = new BufferedReader(fr);
 			String st=br.readLine();
 			

@@ -1,4 +1,4 @@
-package com.bridgelabz.codes;
+package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
@@ -8,7 +8,7 @@ public class StopWatch {
 		double start=0;
 		double end=0;
 		
-		 start = Utility.time();
+		 start = Utility.getTime();
 		System.out.println(start);
 		try {
 			Thread.sleep(1000);
@@ -16,7 +16,7 @@ public class StopWatch {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		end = Utility.time();
+		end = Utility.getTime();
 		System.out.println(end);
 		double time=Utility.stopWatch(start, end);
 		

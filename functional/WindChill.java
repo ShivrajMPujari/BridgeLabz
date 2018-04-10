@@ -1,4 +1,4 @@
-package com.bridgelabz.codes;
+package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
@@ -13,7 +13,7 @@ public class WindChill {
 		System.out.println("Enter the value for wind speed(between 3 to 120)(in miles per hour)");
 		speed = Utility.inputDouble();
 
-		Utility.chill(temperature, speed);
+		Utility.chillCalculation(temperature, speed);
 
 	}
 }

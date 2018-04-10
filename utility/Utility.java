@@ -102,13 +102,13 @@ public class Utility {
 	
 	// question 3 (leap year)(functional)
 
-	public static void leapYear(String year) {
+	public static void CheckleapYear(String year) {
 
 		int saal = 0;
 
-		if (year.length() <= 3) {
+		if (year.length()<4) {
 
-			System.out.println("enter the digit of four years");
+			System.out.println("Please enter the digit of four years");
 			return;
 		}
 
@@ -129,10 +129,10 @@ public class Utility {
 		System.out.println(saal + " is not leap year");
 
 	}
-	
+
 	// question 4--- 2 raise to power table (functional)
 	
-	public static void table(int pow){
+	public static void createTable(int pow){
 		
 		if (pow>=31){
 			
@@ -147,10 +147,10 @@ public class Utility {
 	}
 	
 	// question 5 Harmonic number(functional)
-	public static void harmonicCal(double n) {
+	public static void harmonicCalculation(double n) {
 		double sum = 0;
 		if (n == 0) {
-			System.out.println("enter proper harmonic number");
+			System.out.println("Invalid proper harmonic number");
 		}
 
 		for (double i = 1; i <= n; i++) {
@@ -197,7 +197,7 @@ public class Utility {
 	
 	// question 6 prime factorization(functional)
 
-	public static void primeFactor(long n) {
+	public static void primeFactorization(long n) {
 		for (long i = 2; i * i <= n; i++) {
 			while (n % i == 0) {
 				System.out.print(i + " ");
@@ -259,7 +259,7 @@ public class Utility {
 	}
 	
 	
-	public static void distinct(int n) {
+	public static void distinctCouponGenerator(int n) {
 		boolean same = false;
 		int a[] = new int[n];
 		for (int i = 0; i < n; i++) {
@@ -288,7 +288,7 @@ public class Utility {
 	
 	// question 10 triplet (functional)
 
-	public static void triplet(int size) {
+	public static void tripletChecking(int size) {
 
 		int arr[] = new int[size];
 		for (int i = 0; i < size; i++) {
@@ -341,7 +341,7 @@ public class Utility {
 	
 	
 	
-	public static  void arraySelect() {
+	public static  void arraySelection() {
 		
 		int size = 0;
 		System.out.println("select the array type:- 1.integer 2.boolean 3.double");
@@ -350,12 +350,15 @@ public class Utility {
 		System.out.println(a);
 		if (a == 1) {
 
-			System.out.println("enter the size of array");
-			size = Utility.inputInt();
-			int[][] arr = new int[size][size];
+			System.out.println("enter the column of array");
+			int column = Utility.inputInt();
+			
+			System.out.println("enter the row of array");
+			int row = Utility.inputInt();
+			int[][] arr = new int[row ][column];
 
-			for (int i = 0; i < size; i++) {
-				for (int j = 0; j < size; j++) {
+			for (int i = 0; i < row; i++) {
+				for (int j = 0; j < column; j++) {
 					System.out.println("enter the values to array");
 					arr[i][j] = Utility.inputInt();
 
@@ -364,8 +367,8 @@ public class Utility {
 			}
 			//reading 
 
-			for (int i = 0; i < size; i++) {
-				for (int j = 0; j < size; j++) {
+			for (int i = 0; i < row; i++) {
+				for (int j = 0; j < column; j++) {
 					
 					String val=Integer.toString(arr[i][j]);
 						Utility.prints(val);	
@@ -378,12 +381,22 @@ public class Utility {
 		}
 		else if(a==2){
 			
-			System.out.println("enter the size of array");
-			size = Utility.inputInt();
-			boolean[][] arr = new boolean[size][size];
 
-			for (int i = 0; i < size; i++) {
-				for (int j = 0; j < size; j++) {
+			System.out.println("enter the column of array");
+			int column = Utility.inputInt();
+			
+			System.out.println("enter the row of array");
+			int row = Utility.inputInt();
+		//	int[][] arr = new int[column ][row];
+
+			
+			
+//			System.out.println("enter the size of array");
+//			size = Utility.inputInt();
+			boolean[][] arr = new boolean[column ][row];
+
+			for (int i = 0; i <row; i++) {
+				for (int j = 0; j < column; j++) {
 					System.out.println("enter the values to array");
 					arr[i][j] = Utility.inputBoolean();
 
@@ -392,8 +405,8 @@ public class Utility {
 			}
 			//reading 
 
-			for (int i = 0; i < size; i++) {
-				for (int j = 0; j < size; j++) {
+			for (int i = 0; i < row; i++) {
+				for (int j = 0; j < column; j++) {
 					
 					String val=Boolean.toString(arr[i][j]);
 						Utility.prints(val);	
@@ -405,13 +418,15 @@ public class Utility {
 			
 		}
 		else if (a==3){
+			System.out.println("enter the column of array");
+			int column = Utility.inputInt();
 			
-			System.out.println("enter the size of array");
-			size = Utility.inputInt();
-			double[][] arr = new double[size][size];
+			System.out.println("enter the row of array");
+			int row = Utility.inputInt();
+			double[][] arr = new double[row][column];
 
-			for (int i = 0; i < size; i++) {
-				for (int j = 0; j < size; j++) {
+			for (int i = 0; i < row; i++) {
+				for (int j = 0; j < column; j++) {
 					System.out.println("enter the values to array");
 					arr[i][j] = Utility.inputDouble();
 
@@ -421,8 +436,8 @@ public class Utility {
 			
 			//reading 
 
-			for (int i = 0; i < size; i++) {
-				for (int j = 0; j < size; j++) {
+			for (int i = 0; i < row; i++) {
+				for (int j = 0; j < column; j++) {
 					
 					String val=Double.toString(arr[i][j]);
 						Utility.prints(val);	
@@ -443,7 +458,7 @@ public class Utility {
 	
 	
 	// question 11 euclidian distance
-	public static void euclidean (String x1,String y1){
+	public static void euclideanDistanceCalculation (String x1,String y1){
 		
 		
 		
@@ -451,7 +466,7 @@ public class Utility {
 		double y=Double.parseDouble(y1);
 		
 		
-		double d=Math.pow(x, 4);
+		//double d=Math.pow(x, 4);
 		
 		double sum=Math.pow(x, 2)+Math.pow(y, 2);
 		
@@ -497,7 +512,7 @@ public class Utility {
 	
 	// question 13 StopWAtch
 
-	public static double time() {
+	public static double getTime() {
 		double time = System.currentTimeMillis();
 
 		return time;
@@ -511,138 +526,178 @@ public class Utility {
 	}
 	
 	//question 14
-	
-	// Print the board
-    public static void print_board(int[][] board) {
-	System.out.print(printChar(board[0][0]));
-	System.out.print("|");
-	System.out.print(printChar(board[0][1]));
-	System.out.print("|");
-	System.out.println(printChar(board[0][2]));
-	System.out.println("-----");
-	System.out.print(printChar(board[1][0]));
-	System.out.print("|");
-	System.out.print(printChar(board[1][1]));
-	System.out.print("|");
-	System.out.println(printChar(board[1][2]));
-	System.out.println("-----");
-	System.out.print(printChar(board[2][0]));
-	System.out.print("|");
-	System.out.print(printChar(board[2][1]));
-	System.out.print("|");
-	System.out.println(printChar(board[2][2]));
-    }
 
-    
+	static final int EMPTY = 0;
+	static final int NONE = 0;
+	static final int USER = 1;
+	static final int COMPUTER = 2;
+	static final int Tie = 3;
 
-    // Return an X or O, depending upon whose move it was
-    public static char printChar(int b) {
-	switch(b) {
-	case EMPTY:
-	    return ' ';
-	case USER:
-	    return 'X';
-	case COMPUTER:
-	    return 'O';
+	// Generate a random computer move
+	public static int computer_move(int[][] board) {
+		int move = (int) (Math.random() * 9);
+
+		while (board[move / 3][move % 3] != EMPTY)
+			move = (int) (Math.random() * 9);
+
+		return move;
 	}
-	return ' ';
-    }
 
-    
-    
-    
-    static final int EMPTY = 0;
-    static final int NONE = 0;
-    static final int USER = 1;
-    static final int COMPUTER = 2;
-    static final int Tie = 3;
+	// See if the game is over
+	public static int checkWinner(int[][] board) {
 
-  /*  public static void constants(){
-    	
-    	
-    	  final int EMPTY = 0;
-    	   final int NONE = 0;
-    	     final int USER = 1;
-    	    final int COMPUTER = 2;
-    	    final int Tie = 3;
+		// top row
+		if ((board[0][0] == board[0][1]) && (board[0][1] == board[0][2]))
+			return board[0][0];
 
-    	
-    	
-    	
-    	
-    }*/
-    // See if the game is over
-    public static int checkWinner(int[][] board) {
+		// middle row
+		if ((board[1][0] == board[1][1]) && (board[1][1] == board[1][2]))
+			return board[1][0];
 
-	// top row
-	if((board[0][0] == board[0][1]) && (board[0][1] == board[0][2]))
-	    return board[0][0];
+		// bottom row
+		if ((board[2][0] == board[2][1]) && (board[2][1] == board[2][2]))
+			return board[2][0];
 
-	// middle row
-	if((board[1][0] == board[1][1]) && (board[1][1] == board[1][2]))
-	    return board[1][0];
+		// Check verticals
 
-	// bottom row
-	if((board[2][0] == board[2][1]) && (board[2][1] == board[2][2]))
-	    return board[2][0];
+		// left column
+		if ((board[0][0] == board[1][0]) && (board[1][0] == board[2][0]))
+			return board[0][0];
 
-	// Check verticals
+		// middle column
+		if ((board[0][1] == board[1][1]) && (board[1][1] == board[2][1]))
+			return board[0][1];
 
-	// left column
-	if((board[0][0] == board[1][0]) && (board[1][0] == board[2][0]))
-	    return board[0][0];
+		// right column
+		if ((board[0][2] == board[1][2]) && (board[1][2] == board[2][2]))
+			return board[0][2];
 
-	// middle column
-	if((board[0][1] == board[1][1]) && (board[1][1] == board[2][1]))
-	    return board[0][1];
+		// Check diagonals
+		// one diagonal
+		if ((board[0][0] == board[1][1]) && (board[1][1] == board[2][2]))
+			return board[0][0];
 
-	// right column
-	if((board[0][2] == board[1][2]) && (board[1][2] == board[2][2]))
-	    return board[0][2];
+		// the other diagonal
+		if ((board[0][2] == board[1][1]) && (board[1][1] == board[2][0]))
+			return board[0][2];
 
-	// Check diagonals
-	// one diagonal
-	if((board[0][0] == board[1][1]) && (board[1][1] == board[2][2]))
-	    return board[0][0];
+		// Check if the board is full
+		if (board[0][0] == EMPTY || board[0][1] == EMPTY || board[0][2] == EMPTY || board[1][0] == EMPTY
+				|| board[1][1] == EMPTY || board[1][2] == EMPTY || board[2][0] == EMPTY || board[2][1] == EMPTY
+				|| board[2][2] == EMPTY)
+			return NONE;
 
-	// the other diagonal
-	if((board[0][2] == board[1][1]) && (board[1][1] == board[2][0]))
-	    return board[0][2];
+		return Tie;
+	}
 
-	// Check if the board is full
-	if(board[0][0] == EMPTY || 
-           board[0][1] == EMPTY || 
-           board[0][2] == EMPTY || 
-           board[1][0] == EMPTY ||
-           board[1][1] == EMPTY ||
-           board[1][2] == EMPTY ||
-           board[2][0] == EMPTY ||
-           board[2][1] == EMPTY ||
-           board[2][2] == EMPTY)
-	    return NONE;
+	// Print the board
+	public static void print_board(int[][] board) {
+		System.out.print(printChar(board[0][0]));
+		System.out.print("|");
+		System.out.print(printChar(board[0][1]));
+		System.out.print("|");
+		System.out.println(printChar(board[0][2]));
+		System.out.println("-----");
+		System.out.print(printChar(board[1][0]));
+		System.out.print("|");
+		System.out.print(printChar(board[1][1]));
+		System.out.print("|");
+		System.out.println(printChar(board[1][2]));
+		System.out.println("-----");
+		System.out.print(printChar(board[2][0]));
+		System.out.print("|");
+		System.out.print(printChar(board[2][1]));
+		System.out.print("|");
+		System.out.println(printChar(board[2][2]));
+	}
 
-	return Tie;
-    }
-    
-    
-    // Generate a random computer move
-    public static int computer_move(int[][] board) 
-    {
-    	int move = (int)(Math.random()*9);
+	// gameplay
+	public static void gamePlay() {
 
-    	while(board[move/3][move%3] != EMPTY) 
-    		move = (int)(Math.random()*9);
+		int turn = USER;
+		Scanner sc = new Scanner(System.in);
+		// We will represent the board as nine cells
+		// 0 = empty, 1 = user, 2 = computer
+		int[][] board = new int[3][3];
 
-    	return move;
-}
+		// move: 1-9 representing
+		int move;
 
-	
-	
-	
+		// winner: 0 = none, 1 = user, 2 = computer, 3 = tie
+		int winner;
+
+		System.out.println("This is a tic-tac-toe game");
+		System.out.println("You are playing against the computer!");
+		System.out.println("Enter 0-8 to indicate your move");
+
+		Utility.print_board(board);
+
+		// While (game not over)
+		while (true) {
+			if (turn == USER) {
+				System.out.println("Your move");
+				move = -1;
+				while (move < 0 || move > 8 || board[move / 3][move % 3] != EMPTY) {
+					System.out.println("Please enter your move(0-8): ");
+					move = sc.nextInt();
+				}
+			} else {
+				move = Utility.computer_move(board);
+				System.out.println("Computer move: " + move);
+			}
+
+			// Update the board
+			board[(int) (move / 3)][move % 3] = turn;
+
+			// Print the board
+			Utility.print_board(board);
+
+			// if game is over
+			winner = Utility.checkWinner(board);
+
+			if (winner != NONE)
+				break;
+
+			// switch turn
+			if (turn == USER) {
+				turn = COMPUTER;
+			} else {
+				turn = USER;
+			}
+
+		}
+
+		// Print out the outcome
+		switch (winner) {
+		case USER:
+			System.out.println("You won!");
+			break;
+		case COMPUTER:
+			System.out.println("Computer won!");
+			break;
+		default:
+			System.out.println("Tie!");
+			break;
+		}
+	}
+
+	// Return an X or O, depending upon whose move it was
+	public static char printChar(int b) {
+		switch (b) {
+		case EMPTY:
+			return ' ';
+		case USER:
+			return 'X';
+		case COMPUTER:
+			return 'O';
+		}
+		return ' ';
+	}
+
 	
 	// question 15 Quadratic equation 
 	
-	public static double delta(double a,double b,double c){
+	public static double deltaCalculation(double a,double b,double c){
 		double delta=0;
 		double b2=0;
 		
@@ -653,7 +708,7 @@ public class Utility {
 
 	} 
 	
-	public static void roots(double delta,double a,double b,double c){
+	public static void calculateRoots(double delta,double a,double b,double c){
 		
 		double dsqt=Math.sqrt(delta);
 		
@@ -667,7 +722,7 @@ public class Utility {
 	
 	//question 16 (wind chill) 
 	
-	public static void chill(double temperature,double speed) {
+	public static void chillCalculation(double temperature,double speed) {
 		double t=temperature;
 		double v= speed;
 		double r=0;
@@ -690,7 +745,7 @@ public class Utility {
 	// ALOGORITHMS -------------
 
 	// QUESTION 1 ANAGRAM detection
-	public static void anagram(String s1, String s2) {
+	public static void anagramDetection(String s1, String s2) {
 
 		char[] a1 = s1.toCharArray();
 		char[] a2 = s2.toCharArray();
@@ -719,12 +774,11 @@ public class Utility {
 		}
 
 	}
-	
-	
-	
+
+
 	// question 2 prime number range
 
-	public static void range(int a, int b) {
+	public static void  makeRange(int a, int b) {
 
 		for (int i = a; i <= b; i++) {
 
@@ -749,8 +803,9 @@ public class Utility {
 		}
 		if (count == 0) {
 			System.out.println(p + " ");
-			 Utility.storeArray(p);
-			Utility.palindromic(p);
+			// Utility.storeArray(p);
+			
+			Utility.CheckPalindromic(p);
 
 		}
 
@@ -758,7 +813,7 @@ public class Utility {
 
 	// question 3 extension
 
-	public static void palindromic(int num) {
+	public static void CheckPalindromic(int num) {
 
 		String st = Integer.toString(num);
 		char[] s = st.toCharArray();
@@ -782,39 +837,119 @@ public class Utility {
 
 	}
  
-	// storing 
-	public static void storeArray(int num) {
-		
-		ArrayList kk=Utility.adder();
-		kk.add(num);
-		
 
+
+	 public static int[] primeNumbers(int n)
+	    {
+	            int a[]=new int[n];int k=0;
+	            for(int i=0;i<n;i++)
+	            {
+	                if(isPrime(i))
+	                {
+	                    a[k]=i;
+	                    k++;
+	                }
+	            }
+	            int len=0;
+	            for (int i=0; i<a.length; i++)
+	                {
+	                    if (a[i] != 0)
+	                        len++;
+	                }
+	               
+	                int [] newArray = new int[len];
+	                int j=0;
+	                for (int i=0; i<a.length; i++)
+	                {
+	                    if (a[i] != 0) {
+	                        newArray[j] = a[i];
+	                        j++;
+	                    }
+	                }
+	                System.out.println();
+	              
+	              /*  for (int integer : newArray) {
+	                    System.out.println(integer);
+	                } */
+	            return newArray;
+	           
+	       
 	}
-
-	//arraylist
-	public static ArrayList adder() {
-
-		ArrayList al = new ArrayList();
-		
-		return al;
-		
+	
+	//To check number is prime or not
+	    public static boolean isPrime (int number) {
+	  
+	     for(int i=2; i<=number/2; i++){
+	         if(number % i == 0){
+	             return false;
+	         }
+	     }
+	     return true;
 	}
-
-	// stimulate anagram
-
-	public static void checkAnagram(ArrayList list) {
-
-		for (int i = 0; i < list.size(); i++) {
-			int num1 = (int) list.get(i);
-			for (int j = i + 1; j < list.size() - 1; j++) {
-				int num2 = (int) list.get(j);
-				Utility.aCheck(num1, num2);
-
+	    
+	  //Method to find prime anagram
+	    public static boolean FindAnagram(int[] out) {
+	        int len=out.length;
+	       boolean status=false;
+	        for(int i=0;i<len;i++)
+	        {
+	            for(int j=i+1;j<len;j++)
+	            {
+	                //System.out.println(out[i]+" "+out[j]);
+	            status=	 AnagramInteger(out[i],out[j]);
+	           
+	            }
+	        }
+	       return status;
+	}
+	    
+	  //Method to display anagram
+	    public static void displayangaram(boolean status) {
+			if(status)
+			{
+				System.out.println("Is Anagram");
 			}
-
-		}
-
+			else
+				System.out.println("Is Not Anagram");
 	}
+	    
+	  //Method for integer anagram
+	    public static boolean AnagramInteger(int n1, int n2) {
+	   
+	        String num1=String.valueOf(n1);
+	        String num2=String.valueOf(n2);
+	       boolean status= Anagram(num1, num2);
+	       return status;
+	}
+	  //Method for Anagram String
+	    public static boolean Anagram(String str1, String str2)
+	    {
+	        char[] string1=str1.toCharArray();
+	        char[] string2=str2.toCharArray();
+	        Arrays.sort(string1);
+	        Arrays.sort(string2);
+	        boolean isAnagram =false;
+	        isAnagram = Arrays.equals(string1, string2);
+	        if(isAnagram==true)
+	        {
+	           //pSystem.out.println(str1+" , "+str2+" are Anagram Strings");
+	        	 return isAnagram;
+	        }
+	        else
+	           //System.out.println(str1+" , "+str2+" are not Anagram Strings");
+	        	  return isAnagram;
+	       
+	}
+	  //Method to display array
+	    public static void display(int array[])
+	    {
+	       
+	        for (int i = 0; i < array.length; i++) {
+	            System.out.print(array[i]+" ");
+	        }
+	        System.out.println();
+	}
+	
 
 	// Anagram check
 
@@ -824,13 +959,15 @@ public class Utility {
 		String s2 = Integer.toString(num2);
 
 		char[] a1 = s1.toCharArray();
+		System.out.println(Arrays.toString(a1));
 		char[] a2 = s2.toCharArray();
+		System.out.println(Arrays.toString(a2));
 		int count = 0;
 
 		if (a1.length == a2.length) {
 			for (int i = 0; i < a1.length; i++) {
 
-				for (int j = 0; j < a2.length; j++) {
+				for (int j = i; j < a2.length; j++) {
 
 					if (a1[i] == a2[j]) {
 
@@ -841,8 +978,9 @@ public class Utility {
 				}
 
 			}
+			System.out.println(count);
 			if (count == a1.length) {
-				System.out.println(s1 + " " + s2 + " are anagram");
+				System.out.println(count+" "+s1 + " " + s2 + " are anagram");
 			}
 
 		}
@@ -969,7 +1107,7 @@ public class Utility {
 
 	}
 	
-	public static void bSortInt(int arr[]) {
+	public static void binarySortInt(int arr[]) {
 
 		for (int i = 0; i < arr.length; i++) {
 
@@ -1027,10 +1165,10 @@ public class Utility {
 		double end=0;
 		double result=0;
 		int []arr1={1,2,34,56,78,99};
-		start = Utility.time();
+		start = Utility.getTime();
 		System.out.println(start);
 		Utility.binarySearchInt(arr1, 0, arr1.length, 56);
-		end = Utility.time();
+		end = Utility.getTime();
 		System.out.println(end);
 		result=Utility.stopWatch(start, end);
 		return result;
@@ -1043,10 +1181,10 @@ public class Utility {
 		double end=0;
 		double result=0;
 		String[] st1 ={"acon","bcon","con","dcon","econ","fcon"};
-		start = Utility.time();
+		start = Utility.getTime();
 		System.out.println(start);
 		Utility.binarySearchString(st1, 0, st1.length, "con");
-		end = Utility.time();
+		end = Utility.getTime();
 		System.out.println(end);
 		result=Utility.stopWatch(start, end);
 		return result;
@@ -1059,10 +1197,10 @@ public class Utility {
 		double end=0;
 		double result=0;
 		String [] st={"zon","bcon","ac","mk","za","ad"};
-		start = Utility.time();
+		start = Utility.getTime();
 		System.out.println(start);
 		Utility.iSortString(st);
-		end = Utility.time();
+		end = Utility.getTime();
 		System.out.println(end);
 		result=Utility.stopWatch(start, end);
 		return result;
@@ -1075,20 +1213,16 @@ public class Utility {
 		double result=0;
 	//	String [] st={"zon","bcon","ac","mk","za","ad"};
 		int arr[]= {2,3,1,54,0,7,5};
-		start = Utility.time();
+		start = Utility.getTime();
 		System.out.println(start);
 		Utility.iSortInt(arr);
-		end = Utility.time();
+		end = Utility.getTime();
 		System.out.println(end);
 		result=Utility.stopWatch(start, end);
 		return result;
 	}
 	
-	
-	
-	
-	
-	
+
 	//StopWatch for bubble sort String
 	
 	public static double bSortStringStopWatch(){
@@ -1096,10 +1230,10 @@ public class Utility {
 		double end=0;
 		double result=0;
 		String [] st={"zon","bcon","ac","mk","za","ad"};
-		start = Utility.time();
+		start = Utility.getTime();
 		System.out.println(start);
 		Utility.bSortString(st);
-		end = Utility.time();
+		end = Utility.getTime();
 		System.out.println(end);
 		result=Utility.stopWatch(start, end);
 		return result;
@@ -1114,10 +1248,10 @@ public class Utility {
 		double result=0;
 	
 		int arr[]= {2,3,1,54,0,7,5};
-		start = Utility.time();
+		start = Utility.getTime();
 		System.out.println(start);
-		Utility.bSortInt(arr);
-		end = Utility.time();
+		Utility.binarySortInt(arr);
+		end = Utility.getTime();
 		System.out.println(end);
 		result=Utility.stopWatch(start, end);
 		return result;
@@ -1148,7 +1282,7 @@ public class Utility {
 	
 	//search method
 
-	public static void binarySearchUser(int arr[], int sIndex, int eIndex) {
+	public static void binarySearchingUser(int arr[], int sIndex, int eIndex) {
 
 		int want = 0;
 		// int mid=(sIndex+eIndex)/2;
@@ -1165,11 +1299,11 @@ public class Utility {
 			} else if (want == 2) {
 
 				System.out.println(mid);
-				binarySearchUser(arr, sIndex, mid - 1);
+				binarySearchingUser(arr, sIndex, mid - 1);
 
 			} else if (want == 3) {
 
-				binarySearchUser(arr, mid + 1, eIndex);
+				binarySearchingUser(arr, mid + 1, eIndex);
 			}
 
 		} else {
@@ -1277,8 +1411,61 @@ public class Utility {
 	            System.out.println("\nNumber of changes:"+count);
 	    }
 
+	//question 14 sqt using newton
 	
-	
-	
-	
+	 public static int sqrt(double e, int c) {
+
+			int t = c;
+			int i = 0;
+			double e1 = e - 15;
+
+			while (Math.abs((t - c / t)) > e1 * t) {
+				t = ((c / t) + t) / 2;
+
+				if (i == 10) {
+					break;
+				}
+				i++;
+			}
+			return t;
+
+		}
+	 
+	 //day of the week
+	 public static int findingDay(int m, int d, int y)
+	    {
+	        /*y0 = y − (14 − m) / 12
+	                x = y0 + y0/4 − y0/100 + y0/400
+	                m0 = m + 12 × ((14 − m) / 12) − 2
+	                d0 = (d + x + 31m0 / 12) mod 7*/
+	        int y1=y-(14-m)/12;
+	        int x=y1+y1/4-y1/100+y1/400;
+	        int m1=m + 12 * ((14 - m) / 12) - 2;
+	        int d1=(d+x+31*m1/12) % 7;
+	        //System.out.println(d1);
+	        return d1;
+	}
+
+	 //temperature conversion
+	 
+	  public static void temperatureConvert(int choice, int temperature)
+	    {
+	        /*Celsius to Fahrenheit:   (°C × 9/5) + 32 = °F
+	                Fahrenheit to Celsius:   (°F − 32) x 5/9 = °C
+	         */
+	        int convert;
+	       
+	        switch(choice)
+	        {
+	        case 1:    convert=(temperature * 9/5)+32;
+	                System.out.println("After Conversation:"+convert);
+	                break;
+	       
+	        case 2: convert=(temperature-32)*5/9;
+	                System.out.println("After Conversation:"+convert);
+	                break;
+	        default: break;
+	        }   
+	}
+	 
 }

@@ -1,4 +1,4 @@
-package com.bridgelabz.Algorithms;
+package com.bridgelabz.algorithms;
 
 import java.util.Arrays;
 
@@ -13,7 +13,7 @@ public class IntegersSort {
 		 String[] s=st.split("\\s");
 		
 		int[] integer=Utility.stringTOInt(s);
-		 Utility.bSortInt(integer);
+		 Utility.binarySortInt(integer);
 		 System.out.println(Arrays.toString(integer));
 		 
 		

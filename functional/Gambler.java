@@ -1,16 +1,16 @@
-package com.bridgelabz.codes;
+package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
-public class gambler {
+public class Gambler {
 
 	public static void main(String[] args) {
 		
-		System.out.println("enter stakes");
+		System.out.println("Enter stakes");
 		int stake=Utility.inputInt();
-		System.out.println("enter goal");
+		System.out.println("Enter goal");
 		int goal=Utility.inputInt();
-		System.out.println("enter numbers of times");
+		System.out.println("Enter numbers of times");
 		int times=Utility.inputInt();
 		
 		Utility.gambling(stake, goal, times);

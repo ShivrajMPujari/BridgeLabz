@@ -1,4 +1,4 @@
-package com.bridgelabz.codes;
+package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
@@ -10,7 +10,7 @@ public class LeapYear {
 		
 		System.out.println("enter the any year");
 		year=Utility.inputString();
-		Utility.leapYear(year);
+		Utility.CheckleapYear(year);
 		
 	}
 }

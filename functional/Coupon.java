@@ -1,4 +1,4 @@
-package com.bridgelabz.codes;
+package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
@@ -8,7 +8,7 @@ public class Coupon {
 	
 		System.out.println("Enter the N term:");
 		int n = Utility.inputInt();
-		Utility.distinct(n);
+		Utility.distinctCouponGenerator(n);
 		
 		
 	}

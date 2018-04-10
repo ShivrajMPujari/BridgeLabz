@@ -1,4 +1,4 @@
-package com.bridgelabz.Algorithms;
+package com.bridgelabz.algorithms;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

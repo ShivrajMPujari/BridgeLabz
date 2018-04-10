@@ -1,4 +1,4 @@
-package com.bridgelabz.codes;
+package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
@@ -10,10 +10,8 @@ public class Pow2 {
 		int power=0;
 		System.out.println("enter the power of 2 for the table");
 		power=Utility.inputInt();
-		Utility.table(power);
+		Utility.createTable(power);
 		
-		
-		
-		
+
 	}
 }

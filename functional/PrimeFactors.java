@@ -1,4 +1,4 @@
-package com.bridgelabz.codes;
+package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
@@ -12,7 +12,7 @@ public class PrimeFactors {
 	//	Utility.factorization(number);
 		
 		long number=Utility.inpuLong();
-		Utility.primeFactor(number);
+		Utility.primeFactorization(number);
 		
 	}
 	

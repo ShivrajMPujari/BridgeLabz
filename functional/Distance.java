@@ -1,4 +1,4 @@
-package com.bridgelabz.codes;
+package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
@@ -11,7 +11,7 @@ public class Distance {
 		String y1=args[1];
 	//	System.out.println(x1);
 		System.out.println("the point to calculate distance from origin is");
-		Utility.euclidean(x1, y1);
+		Utility.euclideanDistanceCalculation(x1, y1);
 	}
 
 }

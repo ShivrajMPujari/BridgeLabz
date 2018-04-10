@@ -1,4 +1,4 @@
-package com.bridgelabz.Algorithms;
+package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
@@ -15,7 +15,7 @@ public class Anagram {
 		System.out.println("Enter String2");
 		s2=Utility.inputString();
 		
-		Utility.anagram(s1, s2);
+		Utility. anagramDetection(s1, s2);
 		
 		
 		

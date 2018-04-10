@@ -1,4 +1,4 @@
-package com.bridgelabz.Algorithms;
+package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
@@ -8,7 +8,7 @@ public class ExtendedPalindromic {
 		
 		System.out.println("enter the number");
 		int num=999;
-		Utility.palindromic(num);
+		Utility.CheckPalindromic(num);
 		
 	}
 

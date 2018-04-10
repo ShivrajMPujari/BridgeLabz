@@ -1,4 +1,4 @@
-package com.bridgelabz.codes;
+package com.bridgelabz.functional;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -11,7 +11,7 @@ public class TwoDArray {
 	public static void main(String[] args) {
 		
 
-		Utility.arraySelect();
+		Utility. arraySelection();
 		
 		
 		
