@@ -43,7 +43,7 @@ public class Utility {
 	}
 	
 	
-	public static long inpuLong() {
+	public static long inputLong() {
 
 		long a = sc.nextLong();
 
@@ -552,10 +552,23 @@ public class Utility {
 
 		return time;
 	}
+	
+	public static double getTimeNano() {
+		double time = System.nanoTime();
+
+		return time;
+	}
 
 	public static double stopWatch(double start, double end) {
 		double timelapsed = ((end - start));
 		System.out.println("Time elapsed is:" + timelapsed +" msec");
+		
+		return timelapsed ;
+	}
+	
+	public static double stopWatchNano(double start, double end) {
+		double timelapsed = ((end - start));
+		System.out.println("Time elapsed is:" + timelapsed +" nsec");
 		
 		return timelapsed ;
 	}
@@ -840,7 +853,7 @@ public class Utility {
 			System.out.println(p + " ");
 			// Utility.storeArray(p);
 			
-			Utility.CheckPalindromic(p);
+			Utility.checkPalindromic(p);
 
 		}
 
@@ -848,7 +861,7 @@ public class Utility {
 
 	// question 3 extension
 
-	public static void CheckPalindromic(int num) {
+	public static void checkPalindromic(int num) {
 
 		String st = Integer.toString(num);
 		char[] s = st.toCharArray();
@@ -867,7 +880,7 @@ public class Utility {
 		String st2 = new String(s1);
 
 		if (st1.equals(st2)) {
-			System.out.println(st1 + " is palindromic ");
+			System.out.println(st1 +" is palindromic ");
 		}
 
 	}
@@ -1022,7 +1035,7 @@ public class Utility {
 
 	}
 	*/
-	    public static void checkingIntAnagaram(int n1, int n2){
+	    public static void checkIntAnagaram(int n1, int n2){
 
 	        String num1=String.valueOf(n1);
 	        String num2=String.valueOf(n2);
@@ -1304,10 +1317,10 @@ public class Utility {
 		double result=0;
 	
 		int arr[]= {2,3,1,54,0,7,5};
-		start = Utility.getTime();
+		start = Utility.getTimeNano();
 		System.out.println(start);
 		Utility.binarySortInt(arr);
-		end = Utility.getTime();
+		end = Utility.getTimeNano();
 		System.out.println(end);
 		result=Utility.stopWatch(start, end);
 		return result;
